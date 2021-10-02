@@ -35,9 +35,11 @@ function App() {
       <button onClick={handleSumbit} type="submit">
         Search
       </button>
+      <div className="img_div">
       {result.map((phto,id) => (
         <img key={id} id={phto} src={phto.urls.small} />
       ))}
+      </div>
     </div>
   );
 }
