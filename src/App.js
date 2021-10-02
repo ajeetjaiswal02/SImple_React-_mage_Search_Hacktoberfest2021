@@ -1,11 +1,44 @@
-import './App.css';
+import React, { useState }  from 'react';
+import "./App.css";
+import axios from "axios";
 
 function App() {
+  const [phto, setphto] = useState("");
+  const [result, setResult] = useState([]);
+
+  const clientid = "Your_API_KEY"
+  function handleChange(event) {
+    setphto(event.target.value);
+  }
+  function handleSumbit(event) {
+    console.log(phto);
+    const url =
+      "https://api.unsplash.com/search/photos?page=1&query=" +
+      phto +
+      "&client_id=" +
+      clientid;
+    axios.get(url).then((response) => {
+      console.log(response.data.results);
+      setResult(response.data.results);
+    });
+  }
+
   return (
     <div className="App">
-      <h1>Hactoberfest2021</h1>
+      <h1>Image Search App</h1>
+      <input
+        onChange={handleChange}
+        type="text"
+        name="photo"
+        placeholder="Search"
+      />
+      <button onClick={handleSumbit} type="submit">
+        Search
+      </button>
+      {result.map((phto,id) => (
+        <img key={id} id={phto} src={phto.urls.small} />
+      ))}
     </div>
   );
 }
-
 export default App;
