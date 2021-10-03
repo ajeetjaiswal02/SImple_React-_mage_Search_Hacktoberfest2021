@@ -1,12 +1,13 @@
 import React, { useState }  from 'react';
 import "./App.css";
 import axios from "axios";
+import Cards from "./component/Cards"
 
 function App() {
   const [phto, setphto] = useState("");
   const [result, setResult] = useState([]);
 
-  const clientid = "Your_API_KEY"
+  const clientid = "Your_Api_key"
   function handleChange(event) {
     setphto(event.target.value);
   }
@@ -35,8 +36,8 @@ function App() {
       <button onClick={handleSumbit} type="submit">
         Search
       </button>
-      {result.map((phto,id) => (
-        <img key={id} id={phto} src={phto.urls.small} />
+      {result.map((phto) => (
+        <Cards className="aaaaa" photos={phto}/>
       ))}
     </div>
   );
