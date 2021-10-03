@@ -11,5 +11,5 @@ function  Cards({photos}) {
     </Card>
   );
 }
-
+{/*g* */}
 export default Cards;
