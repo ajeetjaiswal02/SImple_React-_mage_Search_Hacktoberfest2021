@@ -7,7 +7,7 @@ function App() {
   const [phto, setphto] = useState("");
   const [result, setResult] = useState([]);
 
-  const clientid = "Your_Api_key"
+  const clientid = "Your_API_KEY"
   function handleChange(event) {
     setphto(event.target.value);
   }
@@ -36,11 +36,9 @@ function App() {
       <button onClick={handleSumbit} type="submit">
         Search
       </button>
-      <div className="img_div">
-      {result.map((phto,id) => (
-        <img key={id} id={phto} src={phto.urls.small} />
+      {result.map((phto) => (
+        <Cards photos={phto}/>
       ))}
-      </div>
     </div>
   );
 }
