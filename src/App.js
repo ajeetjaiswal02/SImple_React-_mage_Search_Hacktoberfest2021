@@ -36,9 +36,16 @@ function App() {
       <button onClick={handleSumbit} type="submit">
         Search
       </button>
+<<<<<<< HEAD
       {result.map((phto) => (
         <Cards className="aaaaa" photos={phto}/>
+=======
+      <div className="img_div">
+      {result.map((phto,id) => (
+        <img key={id} id={phto} src={phto.urls.small} />
+>>>>>>> 5e863a384296072c97b1d5c475a43a43ae40fdda
       ))}
+      </div>
     </div>
   );
 }
