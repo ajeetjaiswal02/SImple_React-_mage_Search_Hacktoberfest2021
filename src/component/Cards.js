@@ -33,5 +33,4 @@ function  Cards({photos}) {
     </Card>
   );
 }
-
 export default Cards;
