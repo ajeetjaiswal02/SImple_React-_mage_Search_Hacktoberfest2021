@@ -11,5 +11,5 @@ function  Cards({photos}) {
     </Card>
   );
 }
-
+{/*For DIx* */}
 export default Cards;
