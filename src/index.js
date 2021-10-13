@@ -8,7 +8,7 @@ import ParticleBackground from "./component/ParticleBackground"
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <ParticleBackground /> */}
+    <ParticleBackground />
   </React.StrictMode>,
   document.getElementById('root')
 );

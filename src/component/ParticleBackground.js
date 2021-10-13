@@ -8,8 +8,8 @@ export default function ParticleBackground() {
     <div style={{ backgroundColor: "#021b39" }}>
       <Particles
         style={{ position: "absolute" }}
-        height="100%"
-        width="100%"
+        height="45%"
+        width="55%"
         params={{
           particles: {
             color: {
