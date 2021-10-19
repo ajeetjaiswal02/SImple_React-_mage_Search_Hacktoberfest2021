@@ -41,7 +41,7 @@ function App() {
           <input
           className="form-control"
           onChange={handleChange}
-          type="text"
+          type="search"
           name="photo"
           placeholder="Search"
           />
