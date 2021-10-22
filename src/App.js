@@ -54,7 +54,7 @@ function App() {
           </button>
       </div>
       {
-          (searchterm == "")
+          (searchterm === "")
           ? <h3 className="text-secondary fs-5"> Enter keywords to search  </h3>
           : <h3 className="text-secondary fs-5"> Showing results for "<span className="text-primary"> {searchterm} </span> " </h3>
       }
