@@ -11,11 +11,12 @@ function App() {
   const [result, setResult] = useState([]);
   const [searchterm, setSearchTerm] = useState("");
   const [isDarkMode, setIsDarkMode] = useState(() => false);
-  const clientid = "Your_API_KEY"
+  const clientid = "Your_API_KEY";
   function handleChange(event) {
     setphto(event.target.value);
   }
   function handleSumbit(event) {
+    event.preventDefault();
     console.log(phto);
     setSearchTerm(phto);
     const url =
@@ -37,24 +38,23 @@ function App() {
       <div className="headder">
           <h1 >Image Search App</h1>
       </div>
-      <div className="input-group mb-3 w-50 m-auto pt-3">
+      <form onSubmit={handleSumbit} className="input-group mb-3 w-50 m-auto pt-3">
           <input
-          className="form-control"
-          onChange={handleChange}
-          type="search"
-          name="photo"
-          placeholder="Search"
-          />
-          <button
-          onClick={handleSumbit}
-          type="submit"
-          className="btn-primary btn"
-          >
-          Search
-          </button>
-      </div>
+            className="form-control"
+            onChange={handleChange}
+            type="search"
+            name="photo"
+            placeholder="Search"
+            />
+            <button
+            type="submit"
+            className="btn-primary btn"
+            >
+            Search
+            </button>          
+      </form>
       {
-          (searchterm == "")
+          (!searchterm)
           ? <h3 className="text-secondary fs-5"> Enter keywords to search  </h3>
           : <h3 className="text-secondary fs-5"> Showing results for "<span className="text-primary"> {searchterm} </span> " </h3>
       }
