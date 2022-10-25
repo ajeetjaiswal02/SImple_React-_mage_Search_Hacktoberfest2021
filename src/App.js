@@ -44,7 +44,7 @@ function App() {
     <div className={isDarkMode ? 'dark-theme' : 'light-theme'}>
       <div className="App" >
         <ParticleBackground />
-        <div className="headder">
+        <div className="header">
           <h1 >Image Search App</h1>
         </div>
         <form onSubmit={handleSumbit} className="input-group mb-3 w-50 m-auto pt-3">
@@ -64,8 +64,8 @@ function App() {
         </form>
         {
           (!searchterm)
-          ? <h3 className="text-secondary fs-5"> Enter keywords to search  </h3>
-          : <h3 className="text-secondary fs-5"> Showing results for "<span className="text-primary"> {searchterm} </span> " </h3>
+          ? <h3 className="text-secondary fs-5"> Enter Keywords To Search  </h3>
+          : <h3 className="text-secondary fs-5"> Showing Results F  or "<span className="text-primary"> {searchterm} </span> " </h3>
         }
         {isLoading ? (
           <div className="w-100 mt-5 d-flex justify-content-center align-items-center">
