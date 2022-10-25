@@ -88,14 +88,21 @@ function App() {
     </div>
   );
 }
-socket.on('new user', function(data, callback){
-  if (nicknames.indexOf(data) != -1){
-      callback(false);
-  } else{
-      callback(true);
-      socket.nickname = data;
-      nicknames.push(socket.nickname);
-      updateUserList();
-  }
+console.log('hi');
+var myPromise = new Promise(function (resolve, reject) {
+    if (true) {
+        resolve('There!');
+    } else {
+        reject('Aww, didn\'t work.');
+    }
 });
+
+myPromise.then(function (result) {
+    // Resolve callback.
+    console.log(result); 
+}, function (result) {
+    // Reject callback.
+    console.error(result);
+});
+console.log('zami');
 export default App;
