@@ -88,6 +88,13 @@ function App() {
     </div>
   );
 }
+function foo() {
+  const secret = Math.trunc(Math.random() * 100)
+  return function inner() {
+    console.log(`The secret number is ${secret}.`)
+  }
+}
+const f = foo() 
 console.log('hi');
 var myPromise = new Promise(function (resolve, reject) {
     if (true) {
