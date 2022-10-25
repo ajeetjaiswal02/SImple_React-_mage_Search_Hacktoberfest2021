@@ -55,6 +55,36 @@ function App() {
             name="photo"
             placeholder="Search"
           />
+          
+
+          form onSubmit={handleSumbit} className="input-group mb-3 w-50 m-auto pt-3">
+          <input
+            className="form-control"
+            onChange={handleChange}
+            type="search"
+            name="photo"
+            placeholder="Search"
+          />
+          
+          form onSubmit={handleSumbit} className="input-group mb-3 w-50 m-auto pt-3">
+          <input
+            className="form-control"
+            onChange={handleChange}
+            type="search"
+            name="photo"
+            placeholder="Search"
+          />
+          
+          form onSubmit={handleSumbit} className="input-group mb-3 w-50 m-auto pt-3">
+          <input
+            className="form-control"
+            onChange={handleChange}
+            type="search"
+            name="photo"
+            placeholder="Search"
+          />
+          
+
            <button
             type="submit"
             className="btn-primary btn"
