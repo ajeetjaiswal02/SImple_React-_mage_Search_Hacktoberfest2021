@@ -105,4 +105,5 @@ myPromise.then(function (result) {
     console.error(result);
 });
 console.log('zami');
+//promise function
 export default App;
