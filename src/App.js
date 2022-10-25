@@ -7,6 +7,7 @@ import ParticleBackground from './component/ParticleBackground';
 import DarkModeToggle from "react-dark-mode-toggle";
 import Spinner from "./component/Spinner";
 
+
 function App() {
   const [phto, setphto] = useState("");
   const [result, setResult] = useState([]);
@@ -14,10 +15,12 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => false);
   const [isLoading, setIsLoading] = useState(false);
   const clientid = "Your_API_KEY";
-  function handleChange(event) {
+  function handleChange(event) 
+  {
     setphto(event.target.value);
   }
-  function handleSumbit(event) {
+  function handleSumbit(event) 
+  {
     setIsLoading(true);
     event.preventDefault();
     console.log(phto);
@@ -97,17 +100,24 @@ function App() {
           ? <h3 className="text-secondary fs-5"> Enter Keywords To Search  </h3>
           : <h3 className="text-secondary fs-5"> Showing Results F  or "<span className="text-primary"> {searchterm} </span> " </h3>
         }
-        {isLoading ? (
+        
+        {isLoading ?
+         (
           <div className="w-100 mt-5 d-flex justify-content-center align-items-center">
             <Spinner />
           </div>
-        ) : (
+        )
+         : 
+        (
           <div className="w-100 d-flex justify-content-around flex-wrap">
             {result.map((phto) => (
               <Cards photos={phto} />
-            ))}
+            )
+            )
+            }
           </div>
-        )}
+        )
+        }
       </div>
       <DarkModeToggle
         className="dark-mode-toggle-btn"
